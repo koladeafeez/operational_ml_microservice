@@ -18,10 +18,6 @@ def scale(payload):
     scaled_adhoc_predict = scaler.transform(payload.astype(float))
     return scaled_adhoc_predict
 
-@app.route("/")
-def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
-    return html.format(format)
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -53,6 +49,12 @@ def predict():
         
         """
     
+    
+@app.route("/")
+def home():
+    html = f"<h3>Sklearn Prediction Home</h3>"
+    return html.format(format)
+
     # Logging the input payload
     json_payload = request.json
     LOG.info(f"JSON payload: \n{json_payload}")
