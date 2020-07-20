@@ -5,7 +5,7 @@
 # Step 1:
 # This is your Docker ID/path
 #dockerpath='mehmetincefidan/microservices:latest'
-dockerpath='mehmetincefidan/microservices:latest'
+dockerpath='koladeafeez/microservices:latest'
 
 
 # Step 2
