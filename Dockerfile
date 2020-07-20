@@ -6,12 +6,13 @@ WORKDIR /app
 
 ## Step 2:
 # Copy source code to working directory
-COPY . app.py /app/
+COPY . /app
+COPY model_data /app/model_data
 
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN pip install --upgrade pip &&\
+RUN pip install --upgrade pip && \
     pip install --trusted-host pypi.python.org -r requirements.txt
 
 ## Step 4:

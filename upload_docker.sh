@@ -5,13 +5,14 @@
 
 # Step 1:
 # Create dockerpath
- dockerpath=adamsteffz/app
+# dockerpath=mehmetincefidan/microservices
+export dockerpath="mehmetincefidan/microservices"
 
 # Step 2:  
 # Authenticate & tag
+docker login --username mehmetincefidan
+docker tag microservices $dockerpath
 echo "Docker ID and Image: $dockerpath"
-docker login
-docker tag app $dockerpath
 
 # Step 3:
 # Push image to a docker repository
